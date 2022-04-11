@@ -5,12 +5,17 @@ let ctx = canvas.getContext("2d");
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
-for (let index = 0; index < 10; index++) {
+for (let index = 0; index < 50; index++) {
     ctx.fillStyle = randomRGBA();
     ctx.beginPath();
-    ctx.arc(Math.random() * canvasWidth), Math.round(Math.random() * canvasHeight, Math.random() * 20, 0, Math.PI * 2);
+    ctx.arc(Math.round(Math.random() * canvasWidth), Math.round(Math.random() * canvasHeight),20, 0, Math.PI * 2);
     ctx.fill();
     ctx.closePath();
+}
+
+for (let index = 0; index < 50; index++) {
+    ctx.fillStyle = randomRGBA();
+    ctx.fillRect(Math.round(Math.random() * canvasWidth), Math.round(Math.random() * canvasHeight), Math.round(Math.random()*50),Math.round(Math.random()* 50));
 }
 
 function randomRGBA() {
